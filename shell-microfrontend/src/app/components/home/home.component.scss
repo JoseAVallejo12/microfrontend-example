@@ -1,0 +1,31 @@
+main{
+    height:100%;
+}
+
+.banner{
+
+    background-color: #fff;
+    padding: 25px 0px 25px 0px;
+     
+
+    .title{
+        font-weight: 900;
+        font-size: 46px;
+        line-height: 48px;
+    }
+
+    .btn-banner{
+        padding: 20px 20px 19px;
+        background: #005aa7;
+        color: #fff;
+        font-weight: 500;
+        border-radius: 70px;
+        width: 330px;
+    }
+
+}
+
+.react{
+    background-image: linear-gradient(to right top, #051937, #171228, #190a1a, #12040d, #000000);
+}
+

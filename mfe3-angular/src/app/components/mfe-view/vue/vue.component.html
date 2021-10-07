@@ -1,0 +1,6 @@
+<div class="cards">
+     <div class="container-card flex-column" *ngFor="let robot of selectedRobots">
+      <img src="./assets/icons/heart-full.svg" alt="Heart" style="z-index: 1;">
+      <img class="card-image" [src]="robot?.urlRobot" />
+    </div> 
+  </div>

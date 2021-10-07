@@ -1,0 +1,13 @@
+<div class="container text-center pt-5">
+  <button class="btn btn-primary" (click)="goTo('vue')">
+    Ver estados de Vue...
+    <a routerLink='vue_view' class="text-white text-decoration-none"></a>
+  </button>
+  <button class="btn btn-primary"style="margin-left: 20px;" (click)="goTo('react')">
+    Ver estados de React..
+  </button>
+</div>
+<div class="pt-5 container">
+  <router-outlet></router-outlet>
+</div>
+
