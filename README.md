@@ -1,11 +1,3 @@
----
-title: Lineamientos Microfrontend
-has_children: false
-ordered: true
-parent: Guias y Lineamientos
-toc: true
----
-
 # Lineamientos y buenas prácticas de arquitectura para "MicroFrontend"
 
 El Este documento tiene como propósito enumerar las definiciones que se tienen
