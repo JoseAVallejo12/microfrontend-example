@@ -93,13 +93,12 @@ Las 4 principales aspectos a tener en cuenta a la hora de definir una arquitectu
 
 ### Escenarios de usos
 
-- Escenario Shell/Container - (orquestador).
+- [Escenario Shell/Container](./shell-microfrontend/README.md) - (orquestador).
 - Escenarios agnosticos usando webcomponets en diferentes framework/librerias para web SPA en definicion vertical y horizontal
-  - [Escenario 1 react.](./escenarios/mfe1-react.md)
-  - [Escenario 2 vue.](./escenarios/mfe2-vue.md)
-  - [Escenario 3 angular.]
+  - [Escenario 1 react.](./mfe1-react/README.md)
+  - [Escenario 2 vue.](./mfe2-vue/README.md)
 - Escenario usando angular module para exportar app completas con rutas internas incluidas.
-  - [Escenario 3 angular.](./escenarios/mfe3-angular.md)
+  - [Escenario 3 angular.](./mfe3-angular/README.md)
 
 ## Lista de lineamientos
 
