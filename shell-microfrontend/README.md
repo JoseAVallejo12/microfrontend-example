@@ -5,7 +5,7 @@ Este escenario orquesta la definicion vertical y horizontal de la aplicacion, de
 
 ## Instalación
 
-1. Clonar proyecto `git clone [azure repo url]`
+1. Clonar proyecto `git clone [repo url]`
 2. Ir a la carpeta del proyecto `cd shell-microfrontend`.
 3. Instalar las dependencias `npm install`.
 4. Correr el ambiente local `npm run start`.
@@ -124,34 +124,40 @@ Este escenario orquesta la definicion vertical y horizontal de la aplicacion, de
 
   ```
 
-  2. Se utiliza el selector `mft-wc-wrapper`, el cual recibe la propiedad `options` y 2 propiedades opcionales `props` y `events`
+2. Se utiliza el selector `mft-wc-wrapper`, el cual recibe la propiedad `options` y 2 propiedades opcionales `props` y `events`
 
-  ```ts
-  <mft-wc-wrapper [options]="item" [props]="props" [events]="events">
-  </mft-wc-wrapper>
+`component.html`
 
-  itemReact: WebComponentWrapperOptions = {
-      remoteEntry: 'http://localhost:4204/remoteEntry.js',
-      remoteName: 'react',
-      exposedModule: './web-components',
-      elementName: 'react-element',
-  };
+```html
+<mft-wc-wrapper [options]="item" [props]="props" [events]="events">
+</mft-wc-wrapper>
+```
 
-  props = {
-      "message": "Hello from Shell"
-  }
+`component.ts`
 
-  events = {
-      "clicked": (event) => {
-          console.debug('clicked!', event);
-      }
-  }
-  ```
+```js
+itemReact: WebComponentWrapperOptions = {
+  remoteEntry: "http://localhost:4204/remoteEntry.js",
+  remoteName: "react",
+  exposedModule: "./web-components",
+  elementName: "react-element",
+};
 
-  - **remoteEntry**: Donde se encuentra alojado nuestro microfrontend
-  - **remoteName**: Nombre remoto de la aplicación y/o componente definido en los microfrontend
-  - **exposedModule**: Componente, modulo y/o aplicación expuesta definida en los microfrontend
-  - **elementName**: Nombre del webcomponent creado en cada microfrontned
+props = {
+  message: "Hello from Shell",
+};
+
+events = {
+  clicked: (event) => {
+    console.debug("clicked!", event);
+  },
+};
+```
+
+- **remoteEntry**: Donde se encuentra alojado nuestro microfrontend
+- **remoteName**: Nombre remoto de la aplicación y/o componente definido en los microfrontend
+- **exposedModule**: Componente, modulo y/o aplicación expuesta definida en los microfrontend
+- **elementName**: Nombre del webcomponent creado en cada microfrontned
 
 ## Development server
 

@@ -4,7 +4,7 @@ Microfrontend desarrollado en React. Expone un web component que puede ser insta
 
 ## Instalación
 
-1. Clonar proyecto `git clone [azure repo url]`
+1. Clonar proyecto `git clone [repo url]`
 2. Ir a la carpeta del proyecto `cd mfe1-react`.
 3. Instalar las dependencias `npm install`.
 4. Correr el ambiente local `npm run start`.
