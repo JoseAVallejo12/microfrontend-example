@@ -157,17 +157,7 @@ Las 4 principales aspectos a tener en cuenta a la hora de definir una arquitectu
 - Para trabajar con esta arquitectura podemos partir de una aplicacion nueva o de una existente. Debemos tener claro si vamos a construir una app contenedora o un modulo microfrontend, en cual sea el caso tenemos a disposicion una libreria que nos configura nuestra aplicacion angular para comenzar a construir las diferentes vistas que necesitemos.
 - Ejemplo
 
-## Vocabulario
-
-- Palabra: explicación.
-- Palabra: explicación.
-
 ## Referencias de apoyo
 
 - Titulo. Url.
 - Titulo. Url.
-
-## Contactos de apoyo
-
-- Nombre. Jose Alfredo Vallejo Correo. jose.vallejo@ceiba.com.co
-- Nombre. Juan Sebastian Parrasi Correo. sebastian.parrasi@ceiba.com.co

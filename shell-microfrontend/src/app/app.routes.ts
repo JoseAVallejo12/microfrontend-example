@@ -14,10 +14,10 @@ export const APP_ROUTES: Routes = [
     path: 'angular',
     loadChildren: () =>
       loadRemoteModule({
-        remoteEntry: 'http://localhost:4203/remoteEntry.js',
+        remoteEntry: 'http://localhost:4500/remoteEntry.js',
         remoteName: 'mfe3_angular',
         exposedModule: './Module',
-      }).then((m) => m.MfeModule),
+      }).then((m) => m.ProsumidoresModule),
   },
   {
     path: 'react',
@@ -33,8 +33,7 @@ export const APP_ROUTES: Routes = [
     path: 'vue',
     component: WebComponentWrapper,
     data: {
-      remoteEntry:
-        'http://localhost:4205/remoteEntry.js',
+      remoteEntry: 'http://localhost:4205/remoteEntry.js',
       remoteName: 'vue',
       exposedModule: './web-components',
       elementName: 'vue-element',

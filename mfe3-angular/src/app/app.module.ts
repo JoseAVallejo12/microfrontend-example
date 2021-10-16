@@ -1,25 +1,29 @@
-import { MfeModule } from './components/mfe-view/mfe-view.module';
 import { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
-import { Injector, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { AppComponent } from './app.component';
-import { MfeFormModule } from './components/mfe-form/mfe-form.module';
+import { ProsumidoresComponent } from './prosumidores/prosumidores.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-]
+  {
+    path: '',
+    component: HomeComponent,
+  },
+  {
+    path: 'prosumidores',
+    loadChildren: () =>
+      import('./prosumidores/prosumidores.module').then(
+        (m) => m.ProsumidoresModule
+      ),
+  },
+];
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    RouterModule.forRoot(routes),
-    BrowserModule,
-    MfeModule,
-    MfeFormModule
-  ],
+  declarations: [AppComponent, HomeComponent],
+  imports: [RouterModule.forRoot(routes), BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { 
-}
+export class AppModule {}

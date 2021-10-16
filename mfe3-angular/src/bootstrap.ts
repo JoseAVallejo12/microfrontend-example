@@ -1,10 +1,12 @@
-import { bootstrap } from '@angular-architects/module-federation-tools';
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
 import { AppModule } from './app/app.module';
-import { MfeFormModule } from './app/components/mfe-form/mfe-form.module';
-import { environment } from './environments/environment.prod';
+import { environment } from './environments/environment';
 
-bootstrap(MfeFormModule, {
-  production: environment.production
-});
+if (environment.production) {
+  enableProdMode();
+}
 
-
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));

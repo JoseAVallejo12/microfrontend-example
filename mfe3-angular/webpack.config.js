@@ -23,33 +23,41 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
+      // For remotes (please adjust)
       name: "mfe3_angular",
       filename: "remoteEntry.js",
       exposes: {
-          './Module': './src/app/components/mfe-view/mfe-view.module.ts',
-          './web-components': './src/bootstrap.ts',
+        './Module': './src/app/prosumidores/prosumidores.module.ts',
       },
+
+      // For hosts (please adjust)
+      // remotes: {
+      //     "mfe1": "mfe1@http://localhost:3000/remoteEntry.js",
+
+      // },
+
       shared: share({
         "@angular/core": {
           singleton: true,
-          strictVersion: false,
-          requiredVersion: "~12.1.1",
+          strictVersion: true,
+          requiredVersion: "auto",
         },
         "@angular/common": {
           singleton: true,
-          strictVersion: false,
+          strictVersion: true,
           requiredVersion: "auto",
         },
         "@angular/common/http": {
           singleton: true,
-          strictVersion: false,
+          strictVersion: true,
           requiredVersion: "auto",
         },
         "@angular/router": {
           singleton: true,
-          strictVersion: false,
+          strictVersion: true,
           requiredVersion: "auto",
         },
+
         ...sharedMappings.getDescriptors(),
       }),
     }),
